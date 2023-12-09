@@ -1,0 +1,40 @@
+[profile.default]
+src = 'contracts'
+test = 'test'
+out = "out"
+libs = ["lib"]
+gas_reports = [
+    "EntryPoint",
+    "KeyStore",
+    "SoulWalletFactory",
+    "SoulWalletProxy",
+    "SoulWallet",
+    "SecurityControlModule",
+    "SocialRecoveryModule",
+    "TrustedModuleManager",
+    "TrustedPluginManager",
+    "Dailylimit",
+    "Upgrade",
+    "ERC20Paymaster",
+    "Simple2FA"
+]
+# gas_reports_ignore = ["dev","test"]
+solc = "0.8.21"
+optimizer = true
+optimizer_runs = 100000
+via_ir = true
+
+# RPC config in .env file
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
+arbitrumgoerli = "${ARBITRUM_GOERLI_RPC_URL}"
+optimismgoerli = "${OPTIMISM_GOERLI_RPC_URL}"
+etherum = "${ETHERUM_RPC_URL}"
+arbitrum = "${ARBITRUM_RPC_URL}"
+optimism = "${OPTIMISM_RPC_URL}"
+
+[etherscan]
+goerli = { key = "${GOERLI_SCAN_API_KEY}", chain = "goerli" }
+optimismgoerli = { key = "${OPTIMISM_GOERLI_SCAN_API_KEY}", chain = "optimism-goerli" }
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
