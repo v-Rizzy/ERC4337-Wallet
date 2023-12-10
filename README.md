@@ -21,7 +21,7 @@ Haut Saus Wallet is an ERC4337-compliant smart wallet designed to provide users 
 2. Install dependencies:
 
    ```bash
-   cd haut-saus-wallet
+   cd ERC4337-Wallet
    npm install
    ```
 
